@@ -7,16 +7,16 @@
 			</div>
 			<div padding>
 				<ion-item>
-					<ion-input color="warning" type="text" placeholder="Username"></ion-input>
+					<ion-input [(ngModel)]="form.username" color="warning" type="text" placeholder="Username"></ion-input>
 				</ion-item>
 
 				<ion-item>
-					<ion-input color="warning" type="password" placeholder="Password"></ion-input>
+					<ion-input [(ngModel)]="form.password" color="warning" type="password" placeholder="Password"></ion-input>
 				</ion-item>
 			</div>
 
 			<div padding>
-        <ion-button color="warning" fill="outline" size="large" href="/membros" expand="block">Login</ion-button>
+        <ion-button color="warning" fill="outline" size="large" (click)="fnLogin()" expand="block">Login</ion-button>
         <div class="ion-text-center">
           <a href="/registro">Cadastrar</a>
         </div>
