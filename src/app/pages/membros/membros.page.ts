@@ -11,10 +11,6 @@ export class MembrosPage implements OnInit {
 
   ngOnInit() {
   }
-
-  editar(id) {
-    console.log(id);
-  }
   
   excluir(id) {
     console.log(id);
