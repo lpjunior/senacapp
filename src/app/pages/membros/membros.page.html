@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Senac Rio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Usuários Registrados</ion-label>
+    </ion-list-header>
+    <ion-item-sliding>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="http://icons.iconarchive.com/icons/jonathan-rey/simpsons/256/Bart-Simpson-01-icon.png">
+        </ion-thumbnail>
+        <ion-label>
+            <h2>Bart Simpson</h2>
+            <h3>Study</h3>
+            <p>I should do make my exercise. I can't deserve to be approved unless I do.</p>
+        </ion-label>
+          <ion-note *ngIf="true; else notedesativado" color="success">Ativo</ion-note>
+        <ng-template #notedesativado>
+            <ion-note color="danger">Desativado</ion-note>
+        </ng-template>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="warning" routerLink="/editar/1">Editar</ion-item-option>
+        <ion-item-option color="danger" (click)="excluir('excluindo')">Excluir</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
